@@ -12,5 +12,9 @@ project/plugins/project/
 # Mac OSX Specific
 *.DS_Store
 
+# Ignoring Makefiles
+*Makefile
+*makefile
+
 # Scala-IDE specific
 .scala_dependencies

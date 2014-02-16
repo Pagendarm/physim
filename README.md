@@ -10,6 +10,17 @@ classes and objects are camelCase.
 
 e.g. basic\_test.scala is the src file for BasicTest.class (or $.class)
 
+##The Model
+The model assumed in all these related classes
+is that there are 3 orthoganal base vectors,
+labeled x, y, z in the class files.
+
+z is assumed to be pointed up/ the height in the 
+library functions and class extentions 
+e.g. Gravity(...) applies a force as -Z
+
+x,y are assumed to define a plane normal to the Z direction
+
 ##Directory Structure
 Most directories are managed by the package structure of 
 Scala to maintain simplicity, the folowing two contain

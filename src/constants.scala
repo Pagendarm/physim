@@ -1,10 +1,13 @@
 // Constants 
 // from Physics and Mathmatics
+import math._
 
 package general {
     object Constants {
 
-        val PI = 3.141592654
+        val PI = Pi
+        val TWOPI = 2*Pi
+        val EULER = E
 
     }
 }
