@@ -1,6 +1,9 @@
 *.class
 *.log
 
+# Vim Specific
+*.swp
+
 # sbt specific
 dist/*
 target/

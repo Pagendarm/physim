@@ -5,16 +5,11 @@
 
 package general {
     
-    case class Vector3 (x: Double, y : Double, z : Double) {
+    case class Vector3 (x: Double, y : Double, z : Double) { 
         
         // Tuple3 Constructor
         def this (tuple : Tuple3[Double,Double,Double]) = {
             this (tuple._1,tuple._2,tuple._3)
-        }
-
-        // Copy Constructor
-        def this (other : Vector3) = {
-            this(other.x , other.y, other.z)
         }
         
         // Accesors
