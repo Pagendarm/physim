@@ -21,6 +21,14 @@ e.g. Gravity(...) applies a force as -Z
 
 x,y are assumed to define a plane normal to the Z direction
 
+###Units
+Units are scaled through the convert functions 
+to work with milliseconds. That means distance is
+stored as millimeters, and mass is stored as grams.
+This means that all compound units match SI values,
+for instance grams * mm / ms^2 is identicle to 
+Newtons
+
 ###Directory Structure
 Most directories are managed by the package structure of 
 Scala to maintain simplicity, the folowing two contain
@@ -29,11 +37,5 @@ source files and are visable in the repository
 * src/ *contains all src files*
 
 * tests/ *contains test files for development*
-
-###Package Structure
-
-* general
-	* Constants
-
 
 
