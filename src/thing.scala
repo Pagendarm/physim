@@ -1,9 +1,11 @@
+//DEPRECIATED replaced by force_thing file, same class
+
 //
 // Thing class to
 // describe the items and
 // objects in the simulation
 //
-
+/*
 package physics {
 
     import general._
@@ -16,3 +18,4 @@ package physics {
     }
 
 }
+*/

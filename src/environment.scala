@@ -6,7 +6,7 @@ package physics {
     import general._
     import general.Vector3
     import scala.collection.immutable._
-    class Enviroment (
+    class Environment (
         protected val time_limit : Long , // how long simulation runs
         protected val delta : Long )    // the resolution of data storage 
         {

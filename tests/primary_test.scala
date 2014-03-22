@@ -14,7 +14,7 @@ object PrimaryTest {
         val zero = Vector3(0,0,0)
         val box = Thing ("Box",mass_convert(2,KILO),zero,zero)
 
-        val world = new Enviroment (time_convert(4,BASE), 
+        val world = new Environment (time_convert(4,BASE), 
                                     time_convert(1,BASE))
 
         world add_thing (box, List(push))
