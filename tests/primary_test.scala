@@ -1,11 +1,12 @@
 // Primary test file for
 // all classes, particullarly
-// Enviroment and the grapher package
+// Environment and the grapher package
 
 import physics._
 import general._
 import general.Constants._
 import general.Convert._
+import grapher.PlotData
 
 object PrimaryTest {
     def main (args: Array[String]) {
@@ -17,14 +18,13 @@ object PrimaryTest {
                                     time_convert(1,BASE))
 
         world add_thing (box, List(push))
-        
-        println ("Before running sim:")
-        println (world)
 
         world simulate
+        
+        val data = world.create_plot_data("Box",2) : PlotData
 
-        println ("After:")
-        println (world)
+        println ("Result:")
+        println (data)
 
 
     }

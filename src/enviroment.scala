@@ -56,6 +56,52 @@ package physics {
                time=time+1
             }
         }
+
+        // PlotData type from the log
+        // of an item
+        // select: should be 
+        // 0 for Time and Velocity points
+        // 1 for Time and Position points
+        // 2 for all 7 lists, Time, Velocity, Postion
+
+        // All long values are converted to double
+        // so that printout is more readable
+        // this results in loss or precision
+        import grapher.PlotData
+        def create_plot_data (name : String, select: Int) : PlotData = { 
+            type LogT = Tuple3[Long,Vector3,Vector3]
+            type ListF = List[Float]
+            val log = things.get(name).get.log.tail : List[LogT]
+            var labels = List() : List[String]
+            var data = List() : List[List[AnyVal]]
+            if (select == 2 || select == 0) {
+
+            val vx= log reverseMap ((e : LogT) => e._3.x.toFloat) : ListF
+            val vy= log reverseMap ((e : LogT) => e._3.y.toFloat) : ListF
+            val vz= log reverseMap ((e : LogT) => e._3.z.toFloat) : ListF
+
+                labels = "xVelocity" :: "yVelocity" :: "zVelocity" :: labels
+                data   =  vx :: vy  :: vz :: data
+            }
+            if (select == 2 || select  == 1) {
+
+            val x= log reverseMap ((e : LogT) => e._2.x.toFloat) : ListF
+            val y= log reverseMap ((e : LogT) => e._2.y.toFloat) : ListF
+            val z= log reverseMap ((e : LogT) => e._2.z.toFloat) : ListF
+
+                labels = "xPosition" :: "yPosition" :: "zPosition" :: labels
+                data   =  x :: y  :: z :: data
+            }
+            // Time
+            val t = log reverseMap ((e : LogT) => e._1) : List[Long]
+            labels = "Time" :: labels
+            data = t :: data
+
+            // Create PlotData
+            val pd = new PlotData (name,labels)
+            pd.set_data(data)
+            pd
+        }
  
         override def toString: String = things toString
 

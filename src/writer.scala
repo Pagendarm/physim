@@ -1,3 +1,8 @@
+// DEPRECIATED
+// Replaced and extended
+// by PlotData class and 
+// functions
+
 // 
 // Class that takes
 // a series of lists and labels
@@ -5,7 +10,7 @@
 // or file that can be read 
 // and transformed into a graph
 //
-
+/*
 package grapher {
     class Writer (val labels : List[String]) {
         var data = List() : List[List[AnyVal]]
@@ -36,4 +41,4 @@ package grapher {
         }
 
     }
-}
+}*/
